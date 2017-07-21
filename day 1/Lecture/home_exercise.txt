@@ -1,0 +1,3 @@
+1/ Code example lifecycle
+2/ Code example change message when click button
+3/ Code exammple random number but it's not duplicate and show array number
