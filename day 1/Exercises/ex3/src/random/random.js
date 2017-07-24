@@ -6,24 +6,26 @@ class Random extends React.Component {
     this.state = {
       min: "",
       max: "",
-      randomNumber: 0,
-      arrayRandomNumber: [],
-      output: "",
-      financialGoal: ''
+      arrayRandomNumber: []
     };
     this.random = this.random.bind(this);
     this.handleChangeMin = this.handleChangeMin.bind(this);
     this.handleChangeMax = this.handleChangeMax.bind(this);
     this.checkRepeat = this.checkRepeat.bind(this);
-    this.checkFullEle = this.checkFullEle.bind(this);
   }
   handleChangeMin(evt) {
     const min = (evt.target.validity.valid) ? evt.target.value : this.state.min;
-    this.setState({ min });
+    this.setState({
+      min,
+      arrayRandomNumber: []
+    });
   }
   handleChangeMax(evt) {
     const max = (evt.target.validity.valid) ? evt.target.value : this.state.max;
-    this.setState({ max });
+    this.setState({
+      max,
+      arrayRandomNumber: []
+    });
   }
   checkRepeat(num) {
     let flag = false;
@@ -38,19 +40,11 @@ class Random extends React.Component {
     if (flag === true) {
       this.random();
     } else {
-      this.checkFullEle(num);
-    }
-  }
-  checkFullEle(num) {
-    var arrayvar = this.state.arrayRandomNumber;
-    arrayvar.push(num);
-    this.setState({
-     arrayRandomNumber: arrayvar
-    });
-    if (this.state.output === "") {
-      this.state.output = num;
-    } else {
-      this.state.output += '-' + num;
+      var arrayvar = this.state.arrayRandomNumber;
+      arrayvar.push(num);
+      this.setState({
+        arrayRandomNumber: arrayvar
+      });
     }
   }
   random() {
@@ -77,7 +71,11 @@ class Random extends React.Component {
         </div>
         <div className="form-group">
           <label>Result</label>
-          <label className="form-control">{this.state.output}</label>
+          <ul>
+            {this.state.arrayRandomNumber.map(function(value) {
+              return <li>{value}</li>;
+            })}
+          </ul>
         </div>
       </div>
     );
