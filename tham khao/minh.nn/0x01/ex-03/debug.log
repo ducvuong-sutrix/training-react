@@ -1,0 +1,11 @@
+[0723/201358.550:ERROR:process_reader_win.cc(182)] ResumeThread: The parameter is incorrect. (0x57)
+[0723/201358.592:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0723/201358.681:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0723/201358.681:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0723/201358.681:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0723/201358.681:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0723/201358.681:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0723/201358.681:ERROR:process_reader_win.cc(242)] ReadMemory at 0x1fca9c of 8 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0723/201358.681:ERROR:exception_snapshot_win.cc(180)] EXCEPTION_POINTERS read failed
+[0723/201358.681:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0723/201358.681:ERROR:scoped_process_suspend.cc(39)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)

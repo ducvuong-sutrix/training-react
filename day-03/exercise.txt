@@ -1,0 +1,5 @@
+1/ get list
+2/ get list like poster film:
+-Thumnail right and detail in the left
+- button delete
+- filter

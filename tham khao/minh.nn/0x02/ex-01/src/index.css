@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+fieldset {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+}
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #e6e6e6;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.form-group {
+  display: block;
+}
+.label {
+  float: left;
+}
+.country-list {
+  width: 100%;
+  height: 28px;
+  margin-top: 10px;
+}
+.btn-submit {
+  padding: 10px 20px;
+}
+.error {
+  text-align: left;
+  color: red;
+}

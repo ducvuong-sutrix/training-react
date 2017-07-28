@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+.clearfix:after{
+	display: block;
+	clear: both;
+	content: '';
+}
+.form-register{
+	width: 42%;
+	margin: 20px auto;
+	border: 1px solid #ccc;
+	padding: 20px;
+	font-size: 12px;
+}
+.form-register .form-group:after{
+	display: block;
+	clear: both;
+	content: '';
+}
+.form-register .form-group{
+	margin-bottom: 10px;
+}
+.form-register .form-group label{
+	width: 35%;
+	float: left;
+	margin-right: 2em;
+	line-height: 27px;
+}
+
+.form-register .form-group .text-input{
+	width: calc(65% - 2.1em - 7px);
+	float: right;
+	height: 27px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	padding: 0 10px;
+	font-size: 11px;
+}
+.form-register .form-group input.text-input{
+	width: calc(65% - 2.1em - 30px);
+}
+.form-register input.text-input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+.form-register textarea{
+	width: calc(65% - 2.1em - 22px);
+	border-radius: 4px;
+	height: 50px;
+	float: right;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+}
+.form-register .gender input{
+	cursor: pointer;
+}
+.form-register .form-group .required{
+	color: red;
+	margin-left: 5px;
+}
+.form-register .error{
+	color: blue;
+	margin-bottom: 10px;
+	line-height: 18px;
+	font-family: 'Arial';
+}
+.form-register .btn-submit{
+	text-align: right;
+}
+.green{
+	color: green;
+}
