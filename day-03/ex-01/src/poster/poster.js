@@ -6,7 +6,7 @@ class Poster extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			total: 0,
+			// total: 0,
 			movies: [],
 			querySearch: "",
 			error: false
@@ -26,7 +26,7 @@ class Poster extends React.Component {
 			success: (response) => {
 				let data = JSON.parse(response);
 				this.setState({
-					total: data.total,
+					// total: data.total,
 					movies: data.movies,
 				})
 			},
@@ -43,21 +43,21 @@ class Poster extends React.Component {
 
 	handleDeleteFilm(id) {
 		let movies = this.state.movies;
-		let total = this.state.total;
+		// let total = this.state.total;
 		for(var i=0; i < movies.length; i++){
         if(movies[i].id === id){
             movies.splice(i, 1);
-            total -= 1;
+            // total -= 1;
             break;
         }
     }
     this.setState({
     	movies,
-    	total
+    	// total
     })
 	}
 
-	handleFilterMovie(e) {
+	handleFilterMovie = (e) => {
     let querySearch = e.target.value.trim().toLowerCase();
     this.setState({
     	querySearch
@@ -76,7 +76,6 @@ class Poster extends React.Component {
 	}
 
 	renderListMovies = (movies) => {
-	console.log("movies", movies);
 		return movies.map((movie, key) => {
 			return (
 				<li className="list-group-item" key={key}>
@@ -106,7 +105,7 @@ class Poster extends React.Component {
 		if (querySearch.length > 0) {
      	movies = movies.filter(function(movie) {
       	 return movie.title.toLowerCase().match(querySearch);
-    	});	
+    	});
     }
 		return(
 			<div className="container">
@@ -116,7 +115,7 @@ class Poster extends React.Component {
 							<label htmlFor="search">Search</label>
 							<input type="text" className="form-control" name="querySearch"  onChange={this.handleFilterMovie.bind(this)} />
 						</div>
-						<h5><label htmlFor="total">Total:</label> <span className="badge">{this.state.total}</span></h5>	
+						{/*<h5><label htmlFor="total">Total:</label> <span className="badge">{this.state.total}</span></h5>	*/}
 						<ul className="list-group">
 							{this.renderListMovies( movies)}
 						</ul>
