@@ -41,7 +41,7 @@ class Poster extends React.Component {
 		});
 	}
 
-	handleDeleteFilm(id) {
+	handleDeleteFilm = (id) => {
 		let movies = this.state.movies;
 		let total = this.state.total;
 		for(var i=0; i < movies.length; i++){
@@ -62,12 +62,6 @@ class Poster extends React.Component {
     this.setState({
     	querySearch
     })
-		// let movies = this.state.movies;
-		// if (querySearch.length > 0) {
-  //    	movies = movies.filter(function(movie) {
-  //     	 return movie.title.toLowerCase().match(querySearch);
-  //   	});	
-  //   }
 	}
 
 	componentWillMount() {
